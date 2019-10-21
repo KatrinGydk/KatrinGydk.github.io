@@ -8,6 +8,7 @@ body {
 .container {
 	width: 1170px;
 	margin: 0 auto;
+  padding: 0;
 }
 .row:after,.menu:after {
 	content: "";
@@ -168,7 +169,7 @@ input::-webkit-input-placeholder {
 .submenu > li > a:hover {
   background-color: white;
   color: #2c71b5;
-  transition: all 1s ease;
+  transition: all 1s ease;  /*для плавного перехода*/
 }
 /*=========================
 =====MAIN=PART===========
@@ -196,7 +197,7 @@ input::-webkit-input-placeholder {
 =====ХЛЕБНЫЕ=КРОШКИ==========
 =============================*/
 .breadcrumbs {
-  margin-left: 30px;
+  margin-left: 20px;
   margin-top: 30px;
 }
 .breadcrumb-item {
@@ -217,7 +218,7 @@ input::-webkit-input-placeholder {
 =======LAPTOPS AND TABLETS=========
 ===================================*/
 .h2 {
-  margin-left: 30px;
+  margin-left: 20px;
   margin-top: 30px;
   margin-bottom: 60px;
   font-size: 40px;
@@ -239,7 +240,7 @@ input::-webkit-input-placeholder {
   padding-right: 125px; 
 }
 .sort_menu {
-  margin-left: 170px;
+  margin-left: 217px;
   margin-top: 30px;
   display: block; 
   line-height: 35px; /*для выравнивания текста внутри таблички по высоте*/
@@ -284,33 +285,35 @@ input::-webkit-input-placeholder {
   float: left;
   position: relative;
   border: 1px solid white;
-  background-color: rgba(255,255,255,0.09);
-  margin-left: 30px; 
+  background-color: rgba(44, 113, 181, 0.6); /*(0,0,0,0.10) это для темного фона*/
+  margin-left: 20px; 
   margin-right: 0;
   margin-bottom: 30px;
 }
-
 .product-image-block {
-  width: 270px;
+  width: 269px;
   height: 180px;
-/*  background-color: rgba(255,255,255,0.75);
-  background: url(images/PC.png) no-repeat center 20px;*/
+  border-bottom: 1px solid white;
+  position: relative;
+  z-index: 5;
+  background-color: rgba(255,255,255,0.65);
 }
-.product-body {
-
+.img_products {  /*центрирование картинок*/
+  padding: 40px 90px;
+  margin: 0 auto;
 }
 h2 {
   margin-left: 15px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 15px;
+  margin-bottom: 10px;
   color: white;
   font-size: 30px;
 }
 h3 {
   margin-left: 15px;
   margin-right: 43px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   color: white;
   font-size: 18px;
   font-weight: lighter;
@@ -324,3 +327,74 @@ h3 {
   margin-bottom: 10px;  
   float: left; 
 }
+.price { /*цена*/
+  float: left;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 20px;
+  margin-bottom: 30px;   
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+}
+sup { /*  нижний индекс*/
+  font-size: 23px;
+  vertical-align: 0.7em;
+  margin-left: 7px; 
+}
+/*============================
+=====КНОПКИ=В=ТОВАРАХ=======
+============================*/
+.more_det input {
+  float: left;
+  margin-top: 190px;
+  margin-left: -94px;
+  margin-bottom: 5px;
+  border: 1px solid white;
+  background-color: #2c71b5;
+  position: absolute;
+  width: 210px;
+  height: 50px;
+}
+.add_to input {
+  float: left;
+  margin-top: 270px;
+  margin-left: -94px;
+  margin-bottom: 5px;
+  border: 1px solid white;
+  background-color: #2c71b5;
+  position: absolute;
+  width: 210px;
+  height: 50px;
+}
+.more_det input:hover {
+  background-color: rgba(255,255,255,0.15);
+}
+.add_to input:hover {
+  background-color: rgba(255,255,255,0.15);  
+}
+.white_bag {
+  width: 20px;
+  height: 20px;
+  background-image: url(images/white_bag.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
+  position: absolute;
+  top: 4px;
+  left: 40px;
+  margin-top: 488px;
+  margin-left: 150px;
+}
+/*.pic_on_products {
+  width: 20px;
+  height: 20px;
+  background-image: url(images/heart_white.png.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 40px;
+  position: absolute;
+  top: 10px;
+  left: 40px;
+}*/
